@@ -11,7 +11,7 @@ router.get('/api/cars', (req, res) => {
             res.send(data);
         }
         else {
-            console.log(err);
+            console.log("error occured" +error);
         }
     })
 })
