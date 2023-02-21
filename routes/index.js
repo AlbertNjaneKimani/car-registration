@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const router = express.Router();
 
@@ -11,7 +10,7 @@ router.get('/api/cars', (req, res) => {
             res.send(data);
         }
         else {
-            console.log(err);
+            console.log("error occured" +error);
         }
     })
 })
