@@ -34,6 +34,13 @@ router.post('/api/cars/add', (req, res) => {
 
 //get single car  by id
 router.get('/api/cars/:id', (req, res) => {
+    try{
+        const cars=new Car.findById(req.params.id)
+        res.json(cars)
+    }
+    catch(err){
+res.send('Error' + err)
+    }
    //complete the code for getting sinle car
 });
 // update existing car
