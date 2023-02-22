@@ -51,6 +51,3 @@ The application will run on http://localhost:3000 by default.
 If the port is already in use, it can be changed by setting the `PORT` environment variable.
 The easiest way to interact with the server is by installing a API development environment such as [Postman](https://www.getpostman.com/).
 
-## License
-
-Code released under the [MIT License](https://github.com/nflaig/car-rental-api/blob/master/LICENSE).
