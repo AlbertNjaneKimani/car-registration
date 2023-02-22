@@ -69,23 +69,7 @@ router.put('/api/cars/edit/:id', (req, res) => {
 
 //Delete a car
 router.delete('/api/cars/delete/:id', (req, res) => {
-    router.remove('/api/cars/delete', (req, res) => {
-    const car = new Cars({
-        number: req.body.number,
-        model: req.body.model,
-        make: req.body.make,
-        description: req.body.description,
-        year: req.body.year,
-        price: req.body.price
-    });
-    car.remove((err, data) => {
-        res.status(200).json({
-            code: 200, message: 'Car deleted successfully ',
-            addCar: data
-        })
-    })
-})
-    // John Waigwa
-   //complete the code for deleting a car single car
+
+    
 })
 module.exports = router;        
