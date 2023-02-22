@@ -1,51 +1,20 @@
-## INTRODUCTION
-
-This project is a implementation of a Car Registration API in [Node.js](https://nodejs.org/en/).
-It uses [Express](https://expressjs.com/) as web framework and [MongoDB](https://www.mongodb.com/) as database.
-The code is fully covered by tests, using [Jest](https://jestjs.io/).
-
-The application allows new users to register and authenticate by using [JSON Web Tokens](https://jwt.io/).
-
-
-## INSTALLATION
-
-In order to run the application on your local machine some requirements need to be installed.
-
-#### Node.js
-
-Install `npm` which is distributed with Node.js.
-
-https://nodejs.org/en/download/
-
-#### MongoDB
-
-Install MongoDB and make sure the database server is running.
-
-https://www.mongodb.com/download-center/community
-
-#### Dependencies
-
-Change the directory to the project folder and install the dependencies.
-
-```
-npm install
-```
-
-## TESTS
-
-Run the tests to make sure everything is installed correctly and working.
-
-```
-npm test
-```
-
-## USAGE
-
-Finally, start the Node web server.
-
-```
-npm start
-```
-
-The easiest way to interact with the server is by installing a API development environment such as [Postman](https://www.getpostman.com/).
-
+# Car Registration Project
+#### This Project is developed to demonstrate the knowledge of nodejs and team collaboration via Github
+## Description
+This is a web project implemented to test the knowledge of nodejs and team collaboration via Github
+## Setup/Installation Requirements
+* Clone the project repository into your local machine ie git clone https://github.com/AlbertNjaneKimani/car-registration.git
+* Navigate to root folder
+* Run npm install to install all the depedencies in the package.json
+* Run node server to run application
+## Known Bugs
+At the moment there are no known bugs.
+## Technologies Used
+It was developed using Nodejs, Express and MongoDb.
+## Support and contact details
+For any support concerning source code and request to collaborate, contact me via: albertnjanek@gmail.com.
+## Base Url
+url: https://car-registration-project.onrender.com
+### License
+*This project uses MIT license.*
+Copyright (c) 2022
