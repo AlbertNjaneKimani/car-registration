@@ -34,14 +34,14 @@ router.post('/api/cars/add', (req, res) => {
 
 //get single car  by id
 router.get('/api/cars/:id', (req, res) => {
-    try{
-        const cars=new Car.findById(req.params.id)
-        res.json(cars)
-    }
-    catch(err){
-res.send('Error' + err)
-    }
-   //complete the code for getting sinle car
+    Cars.findById(req.params.id, (err, data) => {
+        if (!err) {
+            res.send(data);
+        }
+        else {
+            console.log(err);
+        }
+    })
 });
 // update existing car
 router.put('/api/cars/edit/:id', (req, res) => {
@@ -69,7 +69,15 @@ router.put('/api/cars/edit/:id', (req, res) => {
 
 //Delete a car
 router.delete('/api/cars/delete/:id', (req, res) => {
-
+    Cars.findByIdAndRemove(req.params.id, (err, data) => {
+        if (!err) {
+            res.status(200)
+                .json({ code: 200, message: "car deleted successfully" })
+        }
+        else {
+            console.log(err);
+        }
+    })
     
 })
 module.exports = router;        
