@@ -34,14 +34,14 @@ router.post('/api/cars/add', (req, res) => {
 
 //get single car  by id
 router.get('/api/cars/:id', (req, res) => {
-    try{
-        const cars=new Car.findById(req.params.id)
-        res.json(cars)
-    }
-    catch(err){
-res.send('Error' + err)
-    }
-   //complete the code for getting sinle car
+    Cars.findById(req.params.id, (err, data) => {
+        if (!err) {
+            res.send(data);
+        }
+        else {
+            console.log(err);
+        }
+    })
 });
 // update existing car
 router.put('/api/cars/edit/:id', (req, res) => {
@@ -69,23 +69,15 @@ router.put('/api/cars/edit/:id', (req, res) => {
 
 //Delete a car
 router.delete('/api/cars/delete/:id', (req, res) => {
-    router.remove('/api/cars/delete', (req, res) => {
-    const car = new Cars({
-        number: req.body.number,
-        model: req.body.model,
-        make: req.body.make,
-        description: req.body.description,
-        year: req.body.year,
-        price: req.body.price
-    });
-    car.remove((err, data) => {
-        res.status(200).json({
-            code: 200, message: 'Car deleted successfully ',
-            addCar: data
-        })
+    Cars.findByIdAndRemove(req.params.id, (err, data) => {
+        if (!err) {
+            res.status(200)
+                .json({ code: 200, message: "car deleted successfully" })
+        }
+        else {
+            console.log(err);
+        }
     })
-})
-    // John Waigwa
-   //complete the code for deleting a car single car
+    
 })
 module.exports = router;        
